@@ -16,6 +16,7 @@ public class BeanInvoker {
     private List<BeanInterface> list;
 
     @Autowired
+    //String 是对应注入的ID名 默认类名首字母小写
     private Map<String,BeanInterface> map;
 
     @Autowired

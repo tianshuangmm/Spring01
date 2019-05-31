@@ -33,6 +33,7 @@ public class JsrService {
     @PostConstruct
     public void init(){
         System.out.println("Jsr Service init..........");
+        save();
     }
 
     @PreDestroy

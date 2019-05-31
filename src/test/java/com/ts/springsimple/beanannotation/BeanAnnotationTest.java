@@ -2,6 +2,7 @@ package com.ts.springsimple.beanannotation;
 
 import com.ts.springsimple.AbstractUnitTestSupport;
 import com.ts.springsimple.beanannotation.javabased.Store;
+import com.ts.springsimple.beanannotation.multibean.BeanInvoker;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -33,11 +34,21 @@ public class BeanAnnotationTest extends AbstractUnitTestSupport {
         bean.myHashCode();
     }
     /*
-    *
+    *测试 javabased包下的注解
     * */
     @Test
     public void createBean3(){
         Store bean = getBean("stringStoreTest");
         System.out.println(bean.getClass().getName());
+    }
+
+
+    /*
+     *测试 multibean包下的注解
+     * */
+    @Test
+    public void createBean4(){
+        BeanInvoker bean = getBean(BeanInvoker.class);
+        bean.say();
     }
 }
